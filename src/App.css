@@ -2,8 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.Logo {
+  margin: 40px;
+  scale: 1.4;
   pointer-events: none;
 }
 
