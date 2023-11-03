@@ -22,16 +22,19 @@ function App() {
     }).catch(err=> console.log(err));
   }
 
-  // function onSearch(id){
-  //   setCharacters([...characters,example])
-  // }
+  function onClose(id){
+
+    setCharacters(characters.filter(pj=>{
+      return pj.id !== id
+    }))
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <img className="Logo" src={Logo} alt="Logo"></img>
         <NavBar onSearch={onSearch}></NavBar>
-        <Cards characters={characters} />
+        <Cards onClose={onClose} characters={characters} />
       </header>
     </div>
   );

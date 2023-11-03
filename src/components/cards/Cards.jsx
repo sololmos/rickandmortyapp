@@ -18,7 +18,7 @@ export default function Cards(props) {
               gender={pj.gender}
               origin={pj.origin.name}
               image={pj.image}
-              onClose={() => window.alert("close card")}
+              onClose={props.onClose}
             ></Card>
           );}
           return null;
