@@ -25,7 +25,7 @@ function App() {
   function onClose(id){
 
     setCharacters(characters.filter(pj=>{
-      return pj.id !== id
+      return pj.id !== Number(id)
     }))
   }
 
