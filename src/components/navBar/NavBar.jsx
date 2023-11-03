@@ -6,7 +6,7 @@ export default function NavBar(props) {
   return (
     <div className="">
       <SearchBar
-        onSearch={(characterID) => window.alert(characterID)}
+        onSearch={props.onSearch}
       ></SearchBar>
     </div>
   );
