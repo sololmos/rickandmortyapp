@@ -1,0 +1,25 @@
+.button-nav{
+    border-radius: 40px;
+    border: 2px solid  #00b4cb;
+    padding: 8px;
+    margin: 24px;
+    background: none;
+    color: #00b4cb;
+}
+
+.button-nav:hover {
+    cursor: pointer;
+   
+    color: #B1CC34;
+    border: 3px solid  #B1CC34;
+    
+
+  }
+
+  .name{
+    font-size: medium;
+    text-transform: uppercase;
+  }
+  .name:hover{
+    color: #B1CC34;
+  }

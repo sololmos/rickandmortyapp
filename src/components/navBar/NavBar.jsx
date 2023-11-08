@@ -8,6 +8,10 @@ export default function NavBar(props) {
       <SearchBar
         onSearch={props.onSearch}
       ></SearchBar>
+
+      <button className="button-nav" onClick={props.addRandomCharacter}>
+        <p className="name" >Add random character</p>
+        </button>
     </div>
   );
 }

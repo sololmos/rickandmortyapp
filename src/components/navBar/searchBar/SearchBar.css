@@ -29,7 +29,7 @@
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   }
   /*hover effect*/
-  button:hover {
+  .searchButton:hover {
     cursor: pointer;
     color: #fff;
     background-color: #B1CC34;

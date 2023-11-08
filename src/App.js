@@ -5,6 +5,7 @@ import Cards from "./components/cards/Cards.jsx";
 import Logo from "./components/data/Logo.svg";
 import NavBar from "./components/navBar/NavBar";
 import axios from "axios"
+import{Routes, Route} from "react-router-dom"
 
 
 
@@ -12,14 +13,22 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
 
-  function onSearch(id){
-    axios(`https://rickandmortyapi.com/api/character/${id}`).then(({data})=>{
-      if(data.name){
-        setCharacters((oldChars)=>[...oldChars, data]);
-      } else{
-        window.alert('No hay personajes cn este id')
-      }
-    }).catch(err=> console.log(err));
+  function onSearch(id) {
+    axios(`https://rickandmortyapi.com/api/character/${id}`)
+      .then(({ data }) => {
+        if (data.name) {
+          // Verificar si el personaje ya está en la lista
+          const isDuplicate = characters.some((character) => character.id === data.id);
+          if (!isDuplicate) {
+            setCharacters((oldChars) => [...oldChars, data]);
+          } else {
+            window.alert('Este personaje ya está en la lista.');
+          }
+        } else {
+          window.alert('No hay personajes con este ID');
+        }
+      })
+      .catch((err) => console.log(err));
   }
 
   function onClose(id){
@@ -29,12 +38,26 @@ function App() {
     }))
   }
 
+  function addRandomCharacter() {
+    const randomId = Math.floor(Math.random() * 826); // Número de personajes en la API (ajusta según sea necesario)
+    onSearch(randomId);
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img className="Logo" src={Logo} alt="Logo"></img>
-        <NavBar onSearch={onSearch}></NavBar>
-        <Cards onClose={onClose} characters={characters} />
+        <NavBar addRandomCharacter={addRandomCharacter} onSearch={onSearch}></NavBar>
+        {/* <NavBar onSearch={onSearch}></NavBar> */}
+        {/* <button onClick={addRandomCharacter}>Add random character</button> */}
+        <Routes>
+          <Route
+            path="/home"
+            element={<Cards onClose={onClose} characters={characters} />}
+          />
+        </Routes>
+        
       </header>
     </div>
   );

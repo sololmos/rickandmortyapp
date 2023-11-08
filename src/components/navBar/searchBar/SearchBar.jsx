@@ -25,9 +25,9 @@ export default function SearchBar(props) {
               onChange={handleChange}
               value={id}
             />
-            <button 
-            // onClick={()=> {props.onSearch(id)}}
-            onClick={handleSearch} className="searchButton">
+            <button className="searchButton"
+
+            onClick={handleSearch} >
               <i className="fa fa-search">
                 <img src={buttonSearchImg} alt="Searchimg"></img>
               </i>
