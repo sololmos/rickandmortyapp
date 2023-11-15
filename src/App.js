@@ -1,11 +1,12 @@
 import React , { useState } from "react";
 import "./App.css";
 import Cards from "./components/cards/Cards.jsx";
-//import { characters } from "./components/data/data.js";
 import Logo from "./components/data/Logo.svg";
 import NavBar from "./components/navBar/NavBar";
 import axios from "axios"
 import{Routes, Route} from "react-router-dom"
+import About from "./components/about/About.jsx"
+import Detail from "./components/detail/Detail.jsx";
 
 
 
@@ -55,6 +56,14 @@ function App() {
           <Route
             path="/home"
             element={<Cards onClose={onClose} characters={characters} />}
+          />
+          <Route
+            path="/about"
+            element={<About />}
+          />
+            <Route
+            path="/detail/:id"
+            element={<Detail  />}
           />
         </Routes>
         
