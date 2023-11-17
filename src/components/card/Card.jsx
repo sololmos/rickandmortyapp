@@ -9,13 +9,14 @@ export default function Card(props) {
       <button className="button-card" onClick={()=>props.onClose(props.id)}>
         X
       </button>
-      <Link to={`/detail/${props.id}`}>
+      <Link className="link-card" to={`/detail/${props.id}`}>
       <img className="profileImage" alt={props.name} src={props.image}></img>
+      <div className="name">{props.name}</div>
       </Link>
       
       
       <div className="textContainer">
-        <div className="name">{props.name}</div>
+        
         <div className="profile">{props.gender}</div>
         <div className="profile">{props.species}</div>
         <div className="profile">{props.status}</div>
