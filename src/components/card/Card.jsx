@@ -9,7 +9,7 @@ export default function Card(props) {
       <button className="button-card" onClick={()=>props.onClose(props.id)}>
         X
       </button>
-      <Link className="link-card" to={`/detail/${props.id}`}>
+      <Link className="link-card" to={`/detail/${props.id}/${props.name}`}>
       <img className="profileImage" alt={props.name} src={props.image}></img>
       <div className="name">{props.name}</div>
       </Link>

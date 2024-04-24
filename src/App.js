@@ -61,8 +61,8 @@ function App() {
             path="/about"
             element={<About />}
           />
-            <Route
-            path="/detail/:id"
+          <Route
+            path="/detail/:id/:name"
             element={<Detail  />}
           />
         </Routes>
