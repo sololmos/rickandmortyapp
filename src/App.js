@@ -1,18 +1,34 @@
-import React , { useState } from "react";
+import React , { useEffect, useState } from "react";
 import "./App.css";
 import Cards from "./components/cards/Cards.jsx";
 import Logo from "./components/data/Logo.svg";
 import NavBar from "./components/navBar/NavBar";
 import axios from "axios"
-import{Routes, Route} from "react-router-dom"
+import{Routes, Route, useLocation, useNavigate} from "react-router-dom"
 import About from "./components/about/About.jsx"
 import Detail from "./components/detail/Detail.jsx";
+import Form from "./components/form/Form.jsx";
 
 
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  const [access, setAccess] =useState(false);
+  const navigate = useNavigate();
+  const EMAIL ="ejemplo@gmail.com";
+  const PASSWORD= "pass2024"
 
+  function login(userData){
+    if(userData.password === PASSWORD && userData.email === EMAIL){
+      setAccess(true);
+      navigate('/home')
+    }
+  }
+
+  useEffect(()=>{
+    !access && navigate('/');
+     // eslint-disable-next-line
+  },[access]);
 
   function onSearch(id) {
     axios(`https://rickandmortyapi.com/api/character/${id}`)
@@ -44,15 +60,23 @@ function App() {
     onSearch(randomId);
   }
 
+  const  location= useLocation()  
 
   return (
     <div className="App">
       <header className="App-header">
         <img className="Logo" src={Logo} alt="Logo"></img>
-        <NavBar addRandomCharacter={addRandomCharacter} onSearch={onSearch}></NavBar>
+        {
+          location.pathname!== "/" && <NavBar addRandomCharacter={addRandomCharacter} onSearch={onSearch} setAccess={setAccess} ></NavBar>
+        }
+        
         {/* <NavBar onSearch={onSearch}></NavBar> */}
         {/* <button onClick={addRandomCharacter}>Add random character</button> */}
         <Routes>
+          <Route
+            path="/"
+            element={<Form login={login}/>}
+          />
           <Route
             path="/home"
             element={<Cards onClose={onClose} characters={characters} />}
