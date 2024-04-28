@@ -8,6 +8,7 @@ import{Routes, Route, useLocation, useNavigate} from "react-router-dom"
 import About from "./components/about/About.jsx"
 import Detail from "./components/detail/Detail.jsx";
 import Form from "./components/form/Form.jsx";
+import Favorites from "./components/favorites/Favorites.jsx";
 
 
 
@@ -65,6 +66,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <NavBar addRandomCharacter={addRandomCharacter} onSearch={onSearch}></NavBar>
+
         <img className="Logo" src={Logo} alt="Logo"></img>
         {
           location.pathname!== "/" && <NavBar addRandomCharacter={addRandomCharacter} onSearch={onSearch} setAccess={setAccess} ></NavBar>
@@ -88,6 +91,10 @@ function App() {
           <Route
             path="/detail/:id/:name"
             element={<Detail  />}
+          />
+          <Route
+            path="/favorites"
+            element={<Favorites onClose={onClose} />}
           />
         </Routes>
         

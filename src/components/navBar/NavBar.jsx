@@ -46,6 +46,13 @@ export default function NavBar(props) {
         
       </button>
 
+      <button className="button-nav" >
+        <Link className="link" to="/favorites">
+        <p className="name" >My favorites</p>
+        </Link>
+        
+      </button>
+
 
 
 
