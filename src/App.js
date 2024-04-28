@@ -66,7 +66,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <NavBar addRandomCharacter={addRandomCharacter} onSearch={onSearch}></NavBar>
+      
 
         <img className="Logo" src={Logo} alt="Logo"></img>
         {
