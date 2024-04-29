@@ -11,3 +11,17 @@ export function deleteFavorite (id){
         payload: id
     }
 }
+
+export function filter(gender){
+    return{
+        type: "FILTER",
+        payload : gender
+    }
+}
+
+export function order(order){
+    return{
+        type: "ORDER",
+        payload : order
+    }
+}
