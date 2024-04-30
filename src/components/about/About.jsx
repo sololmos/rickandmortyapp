@@ -3,9 +3,14 @@ import "./About.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
+
+
+
 const About = () => {
   return (
+
     <div className="about-container">
+
       <div className="developer-info">
         <p className="detail-paragraph">
           Developed by
