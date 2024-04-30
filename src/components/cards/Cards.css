@@ -5,7 +5,6 @@
  }
  
  .Cards-cont{
-
     display: flex;
     flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente fila si no caben en la pantalla */
     justify-content: space-between; /* Distribuye las tarjetas de manera uniforme con espacio entre ellas */

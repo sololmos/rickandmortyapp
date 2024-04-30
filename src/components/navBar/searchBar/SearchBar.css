@@ -1,55 +1,51 @@
-/* .SearchBar-cont{
-    height:10px ;
-   
-} */
 
 .searchBox {
-    display: flex;
-    max-width: 230px;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    background: #2f3640;
-    border-radius: 50px;
-    position: relative;
-  }
-  
-  .searchButton {
-   
-    color: white;
-    position: absolute;
-    right: 8px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #797474;
-    /* background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%)); */
-    border: 0;
-    display: inline-block;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  }
-  /*hover effect*/
-  .searchButton:hover {
-    cursor: pointer;
-    color: #fff;
-    background-color: #B1CC34;
-    box-shadow: #B1CC34 0 10px 20px;
-    transform: translateY(-3px);
-  }
-  /*button pressing effect*/
-  button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  .searchInput {
-    gap: 16px;
-    margin: 0  16px;
-    border: none;
-    background: none;
-    outline: none;
-    color:#B1CC34;
-    font-size: 15px;
-    padding: 24px 46px 24px 26px;
-  }
-  
+  display: flex;
+  max-width: 230px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: #2f3640;
+  border-radius: 50px;
+  position: relative;
+}
+
+.searchButton {
+  color: white;
+  position: absolute;
+  right: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #797474;
+  /* background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%)); */
+  border: 0;
+  display: inline-block;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+/*hover effect*/
+.searchButton:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #B1CC34;
+  box-shadow: #B1CC34 0 10px 20px;
+  transform: translateY(-3px);
+}
+
+/*button pressing effect*/
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.searchInput {
+  gap: 16px;
+  margin: 0 16px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #B1CC34;
+  font-size: 15px;
+  padding: 24px 46px 24px 26px;
+}

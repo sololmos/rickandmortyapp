@@ -1,8 +1,3 @@
-/* .Card-cont{
-    height:40px ;
-    width: 60px;
-    
-} */
 
 .card {
   margin: 16px;
@@ -16,7 +11,8 @@
   align-items: center;
   justify-content: flex-start;
   transition-duration: 0.5s;
-  position: relative; /* Agregamos esta línea para posicionar el corazón */
+  position: relative;
+  /* Agregamos esta línea para posicionar el corazón */
 }
 
 .profileImage {
@@ -27,7 +23,7 @@
   height: 170px;
   border-radius: 50%;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.329);
-} 
+}
 
 .textContainer {
   width: 100%;
@@ -67,30 +63,30 @@
 }
 
 .heart-icon {
-  color: red; /* Color del corazón cuando está marcado como favorito */
-  position: absolute; /* Lo posicionamos de manera absoluta */
-  top: 10px; /* Alineamos el corazón arriba */
-  left: 20px; /* Alineamos el corazón a la izquierda */
-  font-size: 14px; /* Tamaño del icono del corazón */
+  color: red;
+  /* Color del corazón cuando está marcado como favorito */
+  position: absolute;
+  /* Lo posicionamos de manera absoluta */
+  top: 10px;
+  /* Alineamos el corazón arriba */
+  left: 20px;
+  /* Alineamos el corazón a la izquierda */
+  font-size: 14px;
+  /* Tamaño del icono del corazón */
 }
 
 .heart-icon :hover {
-cursor: pointer;
-color: #b1cc34;
+  cursor: pointer;
+  color: #b1cc34;
 }
 
 .button-card:hover {
-
   color: #b1cc34;
   cursor: pointer;
   scale: 1.3;
   font-weight: bold;
-
- 
 }
 
-.link-card{
+.link-card {
   text-decoration: none;
 }
-
-

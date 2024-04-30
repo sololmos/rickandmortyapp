@@ -8,12 +8,7 @@ function Favorites(props) {
   const { favorites } = props;
   const dispatch = useDispatch();
   const [selectedGender, setSelectedGender] = useState("all"); // Estado para el género seleccionado
-  const [selectedOrder, setSelectedOrder]= useState("")
-
-  // Función para manejar el ordenamiento
-  // function handleOrder(event) {
-  //   dispatch(order(event.target.value));
-  // }
+  const [selectedOrder, setSelectedOrder] = useState("");
 
   function handleOrder(event) {
     const selectedValue = event.target.value;
@@ -25,25 +20,19 @@ function Favorites(props) {
   function handleFilter(event) {
     setSelectedGender(event.target.value);
     dispatch(filter(event.target.value));
-
-
   }
-
-
 
   // Función para restablecer los filtros
   function handleResetFilters() {
     setSelectedGender("all"); // Restablecer el estado del género seleccionado
-    setSelectedOrder("")
+    setSelectedOrder("");
     dispatch(filter("all")); // Restablecer el filtro a su estado inicial
-
-
   }
 
   return (
     <div className="favorites-container">
       <h1>Mis Cartas Favoritas</h1>
-      {/* Contenedor para los selects */}
+
       <div className="select-container">
         <select value={selectedGender} onChange={handleFilter}>
           <option value="all">All genders</option>
@@ -53,11 +42,13 @@ function Favorites(props) {
           <option value="Genderless">Genderless</option>
         </select>
         <div>
-            {/* Botón para restablecer los filtros */}
-            <button className="buttonfilter" onClick={handleResetFilters}>Reset filters</button>
+
+          <button className="buttonfilter" onClick={handleResetFilters}>
+            Reset filters
+          </button>
         </div>
         <select value={selectedOrder} onChange={handleOrder}>
-          <option value="">Order by ID</option> {/* Opción en blanco */}
+          <option value="">Order by ID</option> 
           <option value="A">Ascendente</option>
           <option value="D">Descendente</option>
         </select>
@@ -75,7 +66,7 @@ function Favorites(props) {
             status={favorite.status}
             origin={favorite.origin}
             isFavorite={true}
-            // onClose={props.onClose} 
+
           />
         ))}
       </div>
@@ -90,5 +81,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(Favorites);
-
-
