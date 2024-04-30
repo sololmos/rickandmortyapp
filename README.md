@@ -4,8 +4,8 @@
 <div align="center">
 
 # Rick and Morty App
-
-![Rick and Morty App](/rickandmorty-front/public/Logo2.png)
+The "Rick and Morty App" project is an exciting web application that allows users to explore and manage a collection of characters from the famous "Rick and Morty" series. Using data from the official API, the application offers a wide range of features to discover, filter, and organize the series' characters in a fun and engaging way.
+<!-- ![Rick and Morty App](/rickandmorty-front/public/Logo2.png) -->
 
 ![Login](src/imagelogin.png)
 ![Home](src/imagehome.png)
@@ -13,18 +13,8 @@
 ![detail](src/imagedetail.png)
 
 
-<h3 align = "center" >logo </h3>
-<br/>
-<p>
- <img alignself=center width=800px src="/rickandmorty-front/public/Logo2.png" alt="logo" />
-</p>
-<h3 align = "center" >detail </h3>
-<br/>
-<p>
- <img alignself=center width=800px src="src/imagedetail.png" alt="detail" />
-</p>
 
-The "Rick and Morty App" project is an exciting web application that allows users to explore and manage a collection of characters from the famous "Rick and Morty" series. Using data from the official API, the application offers a wide range of features to discover, filter, and organize the series' characters in a fun and engaging way.
+
 
 </div>
 
@@ -39,9 +29,10 @@ The "Rick and Morty App" project is an exciting web application that allows user
 - **"About" Section:** Information about the application and its purpose.
 
 ![Secure Login:](/rickandmorty-front/src/imagelogin.png)
+![Login](src/imagelogin.png)
 ![Character Exploration:](/rickandmorty-front/src/imagehome.png)
-![Character Exploration:](/rickandmorty-front/src/imagefavorite.png)
-![Initial Page](/rickandmorty-front/src/imagedetail.png)
+![Favorite section:](/rickandmorty-front/src/imagefavorite.png)
+![Detail Page](/rickandmorty-front/src/imagedetail.png)
 
 
 
