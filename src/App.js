@@ -86,7 +86,10 @@ function App() {
           <Route path="/" element={<Form login={login} />} />
           <Route
             path="/home"
-            element={<Cards onClose={onClose} characters={characters} />}
+            element={<Cards 
+              onClose={onClose}
+               characters={characters} 
+                />}
           />
           <Route path="/about" element={<About />} />
           <Route path="/detail/:id/:name" element={<Detail />} />
