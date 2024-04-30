@@ -4,12 +4,13 @@
 <div align="center">
 
 # Rick and Morty App
+![favorite](/public/Logo2.png)
 The "Rick and Morty App" project is an exciting web application that allows users to explore and manage a collection of characters from the famous "Rick and Morty" series. Using data from the official API, the application offers a wide range of features to discover, filter, and organize the series' characters in a fun and engaging way.
 <!-- ![Rick and Morty App](/rickandmorty-front/public/Logo2.png) -->
 <!-- 
 ![Login](src/imagelogin.png)
 ![Home](src/imagehome.png) -->
-![favorite](/public/Logo2.png)
+
 <!-- ![detail](src/imagedetail.png) -->
 
 
@@ -29,7 +30,7 @@ The "Rick and Morty App" project is an exciting web application that allows user
 - **"About" Section:** Information about the application and its purpose.
 
 ![Secure Login:](src/imagelogin.png)
-![Login](src/imagelogin.png)
+
 ![Character Exploration:](src/imagehome.png)
 ![Favorite section:](/src/imagefavorite.png)
 ![Detail Page](/src/imagedetail.png)
