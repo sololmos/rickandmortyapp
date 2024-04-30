@@ -8,16 +8,25 @@ function Favorites(props) {
   const { favorites } = props;
   const dispatch = useDispatch();
   const [selectedGender, setSelectedGender] = useState("all"); // Estado para el género seleccionado
+  const [selectedOrder, setSelectedOrder]= useState("")
 
   // Función para manejar el ordenamiento
+  // function handleOrder(event) {
+  //   dispatch(order(event.target.value));
+  // }
+
   function handleOrder(event) {
-    dispatch(order(event.target.value));
+    const selectedValue = event.target.value;
+    setSelectedOrder(selectedValue); // Actualizar el estado con el valor seleccionado
+    dispatch(order(selectedValue));
   }
 
   // Función para manejar el filtro
   function handleFilter(event) {
     setSelectedGender(event.target.value);
     dispatch(filter(event.target.value));
+
+
   }
 
 
@@ -25,7 +34,10 @@ function Favorites(props) {
   // Función para restablecer los filtros
   function handleResetFilters() {
     setSelectedGender("all"); // Restablecer el estado del género seleccionado
+    setSelectedOrder("")
     dispatch(filter("all")); // Restablecer el filtro a su estado inicial
+
+
   }
 
   return (
@@ -34,7 +46,7 @@ function Favorites(props) {
       {/* Contenedor para los selects */}
       <div className="select-container">
         <select value={selectedGender} onChange={handleFilter}>
-          <option value="all">Todos</option>
+          <option value="all">All genders</option>
           <option value="unknown">Unknown</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
@@ -42,9 +54,10 @@ function Favorites(props) {
         </select>
         <div>
             {/* Botón para restablecer los filtros */}
-            <button className="buttonfilter" onClick={handleResetFilters}>Restablecer Filtros</button>
+            <button className="buttonfilter" onClick={handleResetFilters}>Reset filters</button>
         </div>
-        <select onChange={handleOrder}>
+        <select value={selectedOrder} onChange={handleOrder}>
+          <option value="">Order by ID</option> {/* Opción en blanco */}
           <option value="A">Ascendente</option>
           <option value="D">Descendente</option>
         </select>
@@ -78,71 +91,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps)(Favorites);
 
-
-
-
-
-// Favorites.jsx
-
-// import React from "react";
-// import { connect , useSelector, useDispatch} from "react-redux";
-// import Card from "../card/Card";
-// import "./Favorites.css";
-// import { filter,order } from "../../redux/actions";
-
-// function Favorites(props) {
-//   const { favorites } = props;
-//   const dispatch=useDispatch()
-
-//   function handleOrder(event){
-//     dispatch(order(event.target.value))
-//   }
-//   function handleFilter(event){
-//     dispatch(filter(event.target.value))
-//   }
-
-//   return (
-//     <div className="favorites-container">
-       
-//       <h1>Mis Cartas Favoritas</h1>
-//           {/* Contenedor para los selects */}
-//           <div className="select-container">
-//             <select onChange={handleOrder}>
-//               <option value="A">Ascendente</option>
-//               <option value="D">Descendente</option>
-//             </select>
-//             <select onChange={handleFilter}>
-//               <option value="unknown">Unknown</option>
-//               <option value="Male">Male</option>
-//               <option value="Female">Female</option>
-//               <option value="Genderless">Genderless</option>
-//             </select>
-//           </div>
-//       <div className="favorites">
-//         {favorites.map((favorite) => (
-//           <Card
-//             key={favorite.id}
-//             id={favorite.id}
-//             name={favorite.name}
-//             image={favorite.image}
-//             gender={favorite.gender}
-//             species={favorite.species}
-//             status={favorite.status}
-//             origin={favorite.origin}
-//             isFavorite={true}
-//             // onClose={props.onClose} 
-//           />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// const mapStateToProps = (state) => {
-//   return {
-//     favorites: state.favorites,
-//   };
-// };
-
-// export default connect(mapStateToProps)(Favorites);
 
