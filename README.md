@@ -6,7 +6,12 @@
 # Rick and Morty App
 
 ![Rick and Morty App](/rickandmorty-front/public/Logo2.png)
+
+![Descripción de la imagen](src/imagelogin.png)
+![Descripción de la imagen](src/imagehome.png)
 ![Descripción de la imagen](src/imagefavorite.png)
+![Descripción de la imagen](src/imagedetail.png)
+
 
 <h3 align = "center" >logo </h3>
 <br/>
