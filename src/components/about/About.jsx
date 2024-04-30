@@ -5,7 +5,7 @@ export default function About() {
   return (
 
     <div className="Container">
-     <h3>About</h3>
+     <h1 className="title">About</h1>
     </div>
   );
 }

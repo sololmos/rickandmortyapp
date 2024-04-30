@@ -11,3 +11,17 @@
     gap: 20px; /* Espacio entre las tarjetas */
     margin: 32px;
 } 
+
+.Cards-row {
+   display: flex;
+   flex-wrap: wrap;
+ }
+ 
+ .Cards-row > * {
+   margin-right: 10px; /* Espacio entre las cartas */
+ }
+
+ .pagination{
+   margin: 20px;
+ }
+

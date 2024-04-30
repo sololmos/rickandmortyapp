@@ -29,6 +29,8 @@ function App() {
     // eslint-disable-next-line
   }, [access]);
 
+  //--------------------------------------------------------------
+
   function onSearch(id) {
     axios(`https://rickandmortyapi.com/api/character/${id}`)
       .then(({ data }) => {
@@ -48,6 +50,9 @@ function App() {
       })
       .catch((err) => console.log(err));
   }
+
+  
+  //---------------------------
 
   function onClose(id) {
     setCharacters(
@@ -73,11 +78,10 @@ function App() {
             addRandomCharacter={addRandomCharacter}
             onSearch={onSearch}
             setAccess={setAccess}
+            setCharacters={setCharacters} // Agregar prop para actualizar los personajes
           ></NavBar>
         )}
 
-        {/* <NavBar onSearch={onSearch}></NavBar> */}
-        {/* <button onClick={addRandomCharacter}>Add random character</button> */}
         <Routes>
           <Route path="/" element={<Form login={login} />} />
           <Route

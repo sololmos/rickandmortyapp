@@ -31,7 +31,7 @@ function Favorites(props) {
 
   return (
     <div className="favorites-container">
-      <h1>Mis Cartas Favoritas</h1>
+      <h1 className="title">Favorite characters</h1>
 
       <div className="select-container">
         <select value={selectedGender} onChange={handleFilter}>
