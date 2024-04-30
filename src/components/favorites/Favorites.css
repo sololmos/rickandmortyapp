@@ -15,3 +15,60 @@
     margin-top: 20px;
   }
   
+
+  /* //------------ */
+
+
+/* Estilos para los select */
+/* Estilos para el contenedor de selects */
+.select-container {
+  display: flex;
+  justify-content: center; /* Alinea los selects horizontalmente */
+  gap: 20px; /* Espacio entre los selects */
+}
+
+/* Estilos para los select */
+select {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* background-color:  #282c34; */
+  font-size: 16px;
+}
+.option{
+  color: #00b4cb;
+}
+/* Estilos para los select en modo hover */
+select:hover {
+  border-color: #999;
+}
+
+/* Estilos para los select en modo focus */
+select:focus {
+  outline: none;
+  border-color: #00b4cb;
+  box-shadow: 0 0 0 3px rgba(0, 180, 203, 0.2);
+}
+
+.buttonfilter{
+
+    text-transform:uppercase ;
+    font-weight: 700;
+    border-radius: 6px;
+    border: 1.5px solid  #00b4cb;
+
+    padding: 8px 16px;
+    margin:0 24px;
+    background: none;
+    color: #00b4cb;
+
+}
+.buttonfilter:hover {
+  cursor: pointer;
+  border: #B1CC34;
+ 
+  color: #B1CC34;
+
+  
+
+}

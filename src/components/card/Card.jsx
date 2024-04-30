@@ -41,6 +41,7 @@ function Card(props) {
         <div className="name">{name}</div>
       </Link>
       <div className="textContainer">
+        <div className="profile">{id}</div>
         <div className="profile">{gender}</div>
         <div className="profile">{species}</div>
         <div className="profile">{status}</div>

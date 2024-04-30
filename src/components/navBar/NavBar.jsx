@@ -39,16 +39,18 @@ export default function NavBar(props) {
         
       </button>
 
-      <button className="button-nav"  onClick={handleLogout}>
-        <Link className="link" to="/">
-        <p className="name" >Log out</p>
-        </Link>
-        
-      </button>
+
 
       <button className="button-nav" >
         <Link className="link" to="/favorites">
         <p className="name" >My favorites</p>
+        </Link>
+        
+      </button>
+
+      <button className="button-nav"  onClick={handleLogout}>
+        <Link className="link" to="/">
+        <p className="name" >Log out</p>
         </Link>
         
       </button>
