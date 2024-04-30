@@ -9,7 +9,7 @@ The "Rick and Morty App" project is an exciting web application that allows user
 <!-- 
 ![Login](src/imagelogin.png)
 ![Home](src/imagehome.png) -->
-![favorite](src/imagefavorite.png)
+![favorite](/public/Logo2.png)
 <!-- ![detail](src/imagedetail.png) -->
 
 
