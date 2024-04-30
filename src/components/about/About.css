@@ -1,0 +1,75 @@
+.about-container {
+    margin: 16px;
+    background: rgb(52, 50, 50);
+    border-radius: 24px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.123);
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+
+}
+
+.detail-heading {
+    text-transform: uppercase;
+    color: #00b4cb;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.detail-paragraph {
+    color: #b1cc34;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.detail-list {
+
+    padding-left: 0;
+    /* Quitamos el padding izquierdo */
+}
+
+.detail-list-item {
+    color: #b1cc34;
+    font-size: 16px;
+    margin: 15px;
+    margin-left: 30px;
+    text-align: left;
+    /* text-indent: -15px; Movemos el texto hacia la izquierda para que esté pegado al punto */
+}
+
+.detail-sections {
+    display: flex;
+    justify-content: space-between;
+    /* Alinear secciones una al lado de la otra */
+}
+
+.detail-section {
+    flex-basis: calc(50% - 20px);
+    /* Ancho de cada sección */
+}
+
+.icon {
+    margin: 20px;
+    gap: 20px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #b1cc34;
+}
+
+.icon:hover {
+    transform: scale(1.5) rotate(15deg);
+    transition: transform 0.5s ease;
+    /* Agregar transición suave */
+    color: #00b4cb;
+
+}
+
+.button-nav {
+    text-decoration: none;
+}
+
+.link-class {
+    text-decoration: none;
+}
