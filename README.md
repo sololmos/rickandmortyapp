@@ -16,7 +16,12 @@ The "Rick and Morty App" project is an exciting web application that allows user
 
 <!-- ![detail](src/imagedetail.png) -->
 
+## Access Credentials
 
+To access the application, use the following credentials:
+
+- Email: example@gmail.com
+- Password: pass2024
 
 - **Deploy --->** https://rickandmorty-wine-xi.vercel.app/ 
 
@@ -53,12 +58,7 @@ The "Rick and Morty App" project is an exciting web application that allows user
 - Axios
 - CSS
 
-## Access Credentials
 
-To access the application, use the following credentials:
-
-- Email: example@gmail.com
-- Password: pass2024
 
 ## Installation
 
