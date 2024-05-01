@@ -18,7 +18,7 @@ The "Rick and Morty App" project is an exciting web application that allows user
 
 
 
-
+- **Deploy --->** https://rickandmorty-wine-xi.vercel.app/ 
 
 </div>
 
